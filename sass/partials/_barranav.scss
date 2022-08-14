@@ -9,7 +9,7 @@
   h1 {
     padding: 1rem;
     font-size: 2rem;
-    @include adaptablePagina {
+    @include adaptablePaginaTablet {
       padding-left: 3rem;
       font-size: 3.5rem;
     }
@@ -27,8 +27,12 @@
     list-style: none;
     padding-right: 2rem;
     li {
-      padding: 2.5rem;
-      font-size: 1.25rem;
+      font-size: 1rem;
+      padding: 1.15rem;
+      @include adaptablePaginaTablet {
+        padding: 2.5rem;
+        font-size: 1.25rem;
+      }
       @include adaptablePagina {
         font-size: 1.75rem;
       }

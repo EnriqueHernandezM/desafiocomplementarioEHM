@@ -26,7 +26,7 @@ body {
   padding: 1rem;
   font-size: 2rem;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 576px) {
   .barraDeNavegacion h1 {
     padding-left: 3rem;
     font-size: 3.5rem;
@@ -46,8 +46,14 @@ body {
   padding-right: 2rem;
 }
 .barraDeNavegacion ul li {
-  padding: 2.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  padding: 1.15rem;
+}
+@media screen and (min-width: 576px) {
+  .barraDeNavegacion ul li {
+    padding: 2.5rem;
+    font-size: 1.25rem;
+  }
 }
 @media screen and (min-width: 992px) {
   .barraDeNavegacion ul li {
