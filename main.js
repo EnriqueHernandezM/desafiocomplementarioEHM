@@ -57,8 +57,6 @@ if (saberPromos == "si") {
   } else if (preguntaInicial == "viernes") {
     alert("Los viernes tenemos toda la tienda con 10% de descuento");
     calculadoraDePrecios();
-  } else {
-    alert("Lo sentimos por el momento no tenemos promociones para es dia");
   }
 }
 let preguntaAgregarArticulos = prompt("DESEA AGGREGAR ALGUNO DE NUESTROS ARTICULOS 'si / no'");
