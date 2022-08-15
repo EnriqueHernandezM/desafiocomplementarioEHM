@@ -45,18 +45,21 @@ function calculadoraDePrecios(calcular, precio1, precio2) {
 }
 //terminan funciones
 datosDeIngreso();
-let preguntaInicial = prompt("ingresa el dia en que quieres conocer nuestras promociones");
-if (preguntaInicial == "lunes") {
-  alert("Los lunes tenemos 15% de descuento en vinos, tequila y agua mineral");
-  calculadoraDePrecios();
-} else if (preguntaInicial == "martes") {
-  alert("Los martes tenemos 10% de descuento en whiskey y MSI en tdc");
-  calculadoraDePrecios();
-} else if (preguntaInicial == "viernes") {
-  alert("Los viernes tenemos toda la tienda con 10% de descuento");
-  calculadoraDePrecios();
-} else {
-  alert("Lo sentimos por el momento no tenemos promociones para es dia");
+let saberPromos = prompt("quieres saber de promociones");
+if (saberPromos == "si") {
+  let preguntaInicial = prompt("ingresa el dia en que quieres conocer nuestras promociones");
+  if (preguntaInicial == "lunes") {
+    alert("Los lunes tenemos 15% de descuento en vinos, tequila y agua mineral");
+    calculadoraDePrecios();
+  } else if (preguntaInicial == "martes") {
+    alert("Los martes tenemos 10% de descuento en whiskey y MSI en tdc");
+    calculadoraDePrecios();
+  } else if (preguntaInicial == "viernes") {
+    alert("Los viernes tenemos toda la tienda con 10% de descuento");
+    calculadoraDePrecios();
+  } else {
+    alert("Lo sentimos por el momento no tenemos promociones para es dia");
+  }
 }
 let preguntaAgregarArticulos = prompt("DESEA AGGREGAR ALGUNO DE NUESTROS ARTICULOS 'si / no'");
 if (preguntaAgregarArticulos == "si") {
