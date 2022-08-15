@@ -38,8 +38,6 @@ function calculadoraDePrecios(calcular, precio1, precio2) {
       resultadoConDescuento = precio1 + precio2 - caculoDeDescuento;
       alert(resultadoConDescuento);
       calcular = prompt("deseas calcular otros producto con el descuento aplicado si / no");
-    } else {
-      alert("no itrodujiste ningun dato introduze no para salir");
     }
   }
 }
@@ -57,6 +55,8 @@ if (saberPromos == "si") {
   } else if (preguntaInicial == "viernes") {
     alert("Los viernes tenemos toda la tienda con 10% de descuento");
     calculadoraDePrecios();
+  }else {
+    alert("Lo sentimos por el momento no tenemos promociones para es dia");
   }
 }
 let preguntaAgregarArticulos = prompt("DESEA AGGREGAR ALGUNO DE NUESTROS ARTICULOS 'si / no'");
