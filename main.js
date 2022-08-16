@@ -56,6 +56,8 @@ if (preguntaInicial == "lunes") {
 } else if (preguntaInicial == "viernes") {
   alert("Los viernes tenemos toda la tienda con 10% de descuento");
   calculadoraDePrecios();
+} else if (preguntaInicial == "miercoles" || preguntaInicial == "jueves" || preguntaInicial == "sabado" || preguntaInicial == "domingo") {
+  alert("UPS por el momento no tenemos promociones para este dia");
 }
 
 let preguntaAgregarArticulos = prompt("DESEA AGGREGAR ALGUNO DE NUESTROS ARTICULOS 'si / no'");
