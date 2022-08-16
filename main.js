@@ -38,31 +38,30 @@ function calculadoraDePrecios(calcular, precio1, precio2) {
       resultadoConDescuento = precio1 + precio2 - caculoDeDescuento;
       alert(resultadoConDescuento);
       calcular = prompt("deseas calcular otros producto con el descuento aplicado si / no");
+    } else {
+      alert("no itrodujiste ningun dato introduze no para salir");
     }
   }
 }
 //terminan funciones
 datosDeIngreso();
-let saberPromos = prompt("quieres saber de promociones");
-if (saberPromos == "si") {
-  let preguntaInicial = prompt("ingresa el dia en que quieres conocer nuestras promociones");
-  if (preguntaInicial == "lunes") {
-    alert("Los lunes tenemos 15% de descuento en vinos, tequila y agua mineral");
-    calculadoraDePrecios();
-  } else if (preguntaInicial == "martes") {
-    alert("Los martes tenemos 10% de descuento en whiskey y MSI en tdc");
-    calculadoraDePrecios();
-  } else if (preguntaInicial == "viernes") {
-    alert("Los viernes tenemos toda la tienda con 10% de descuento");
-    calculadoraDePrecios();
-  }else {
-    alert("Lo sentimos por el momento no tenemos promociones para es dia");
-  }
+
+let preguntaInicial = prompt("Queres conocer promociones ingresa el dia en que quieres consultarlas o introduze 'no' para continuar");
+if (preguntaInicial == "lunes") {
+  alert("Los lunes tenemos 15% de descuento en vinos, tequila y agua mineral");
+  calculadoraDePrecios();
+} else if (preguntaInicial == "martes") {
+  alert("Los martes tenemos 10% de descuento en whiskey y MSI en tdc");
+  calculadoraDePrecios();
+} else if (preguntaInicial == "viernes") {
+  alert("Los viernes tenemos toda la tienda con 10% de descuento");
+  calculadoraDePrecios();
 }
+
 let preguntaAgregarArticulos = prompt("DESEA AGGREGAR ALGUNO DE NUESTROS ARTICULOS 'si / no'");
 if (preguntaAgregarArticulos == "si") {
   let ingresoProducto = prompt(
-    "ingresa el numero del producto que quieres ir agregando ingresa ok si tu carrito esta listo" +
+    "ingresa el numero del producto que quieres ir agregando ingresa 'ok' si tu carrito esta listo" +
       "\n" +
       "1) botella ron" +
       "\n" +
