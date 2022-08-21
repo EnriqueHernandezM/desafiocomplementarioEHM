@@ -93,12 +93,12 @@ class PersonaAingresar {
 }
 
 //term objeto class
-/* const personaIngresada = new PersonaAingresar(
+const personaIngresada = new PersonaAingresar(
   prompt("Esta es una pagina solo para mayores de edad INGRESA tus datos para continuar Nombre "),
   prompt("Ingresa tu apellido"),
   parseInt(prompt("Ingresa tu edad"))
 );
-personaIngresada.respuesta(); */
+personaIngresada.respuesta();
 
 //array de objetos
 class ItemsDisponibles {
