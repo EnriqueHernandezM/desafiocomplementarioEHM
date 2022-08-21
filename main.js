@@ -113,16 +113,16 @@ class ItemsDisponibles {
 let inventarioVinateria = [];
 const carritoDeCompras = [];
 
-const item1 = new ItemsDisponibles("../imagenes/i111jack.jpg", 111, "Jack Daniels", "whiskey", 400);
-const item2 = new ItemsDisponibles("../imagenes/i444redL.jpg", 444, "Red Label", "whiskey", 370);
-const item3 = new ItemsDisponibles("../imagenes/i131wiliam.jpg", 131, "Wiliam Lawson", "whiskey", 350);
-const item4 = new ItemsDisponibles("../imagenes/i112Donj.jpg", 112, "Don julio", "tequila", 300);
-const item5 = new ItemsDisponibles("../imagenes/i107jose.jpg", 107, "Jose Cuervo", "tequila", 250);
-const item6 = new ItemsDisponibles("../imagenes/i124jimador.jpg", 124, "Jimador", "tequila", 200);
-const item7 = new ItemsDisponibles("../imagenes/i180capitan.jpg", 180, "Capitan Morgan", "ron", 240);
-const item8 = new ItemsDisponibles("../imagenes/i100Bac.jpeg", 100, "Bacardi", "ron", 260);
-const item9 = new ItemsDisponibles("../imagenes/i166kraken.jpg", 166, "Kraken", "ron", 340);
-const item10 = new ItemsDisponibles("../imagenes/i125black.jpg", 125, "Red Label Blac", "whiskey", 600);
+const item1 = new ItemsDisponibles("./imagenes/i111jack.jpg", 111, "Jack Daniels", "whiskey", 400);
+const item2 = new ItemsDisponibles("./imagenes/i444redL.jpg", 444, "Red Label", "whiskey", 370);
+const item3 = new ItemsDisponibles("./imagenes/i131wiliam.jpg", 131, "Wiliam Lawson", "whiskey", 350);
+const item4 = new ItemsDisponibles("./imagenes/i112Donj.jpg", 112, "Don julio", "tequila", 300);
+const item5 = new ItemsDisponibles("./imagenes/i107jose.jpg", 107, "Jose Cuervo", "tequila", 250);
+const item6 = new ItemsDisponibles("./imagenes/i124jimador.jpg", 124, "Jimador", "tequila", 200);
+const item7 = new ItemsDisponibles("./imagenes/i180capitan.jpg", 180, "Capitan Morgan", "ron", 240);
+const item8 = new ItemsDisponibles("./imagenes/i100Bac.jpeg", 100, "Bacardi", "ron", 260);
+const item9 = new ItemsDisponibles("./imagenes/i166kraken.jpg", 166, "Kraken", "ron", 340);
+const item10 = new ItemsDisponibles("./imagenes/i125black.jpg", 125, "Red Label Blac", "whiskey", 600);
 
 inventarioVinateria.push(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10);
 console.log(inventarioVinateria);
