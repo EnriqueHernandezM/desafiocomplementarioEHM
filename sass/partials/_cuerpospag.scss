@@ -65,7 +65,8 @@
   }
 }
 /*pagina tienda*/
-#itemsAmostrar {
+#itemsAmostrar,
+#itemsEnElCarrito {
   z-index: 2;
   display: flex;
   flex-direction: row;
@@ -79,15 +80,13 @@
     text-align: center;
     line-height: 1px;
     img {
-      width: 10rem;
-      height: 10rem;
+      padding: 1rem;
+      width: 12rem;
+      height: 12rem;
     }
   }
 }
-#itemsEnElCarrito {
-  z-index: 3;
-  border: 1px solid orange;
-}
+
 #anuncioEntrada {
   border-radius: 2%;
   padding: 3rem;

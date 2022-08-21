@@ -146,7 +146,8 @@ body {
 }
 
 /*pagina tienda*/
-#itemsAmostrar {
+#itemsAmostrar,
+#itemsEnElCarrito {
   z-index: 2;
   display: flex;
   flex-direction: row;
@@ -154,21 +155,19 @@ body {
   justify-content: center;
   margin-top: 1rem;
 }
-#itemsAmostrar p {
+#itemsAmostrar p,
+#itemsEnElCarrito p {
   padding: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
   text-align: center;
   line-height: 1px;
 }
-#itemsAmostrar p img {
-  width: 10rem;
-  height: 10rem;
-}
-
-#itemsEnElCarrito {
-  z-index: 3;
-  border: 1px solid orange;
+#itemsAmostrar p img,
+#itemsEnElCarrito p img {
+  padding: 1rem;
+  width: 12rem;
+  height: 12rem;
 }
 
 #anuncioEntrada {

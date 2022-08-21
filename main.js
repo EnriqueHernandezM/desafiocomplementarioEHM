@@ -1,44 +1,3 @@
-/* 
-
-let preguntaInicial = prompt("Queres conocer promociones ingresa el dia en que quieres consultarlas o introduze 'no' para continuar");
-if (preguntaInicial == "lunes") {
-  alert("Los lunes tenemos 15% de descuento en vinos, tequila y agua mineral");
-  calculadoraDePrecios();
-} else if (preguntaInicial == "martes") {
-  alert("Los martes tenemos 10% de descuento en whiskey y MSI en tdc");
-  calculadoraDePrecios();
-} else if (preguntaInicial == "viernes") {
-  alert("Los viernes tenemos toda la tienda con 10% de descuento");
-  calculadoraDePrecios();
-} else if (preguntaInicial == "miercoles" || preguntaInicial == "jueves" || preguntaInicial == "sabado" || preguntaInicial == "domingo") {
-  alert("UPS por el momento no tenemos promociones para este dia");
-}
- */
-function calculadoraDePrecios(calcular, precio1, precio2) {
-  calcular = prompt("deseas calcular algunos productos con el descuento aplicado si / no");
-  while (calcular != "no") {
-    precio1 = parseInt(prompt("ingresa el precio del primer articulo"));
-    precio2 = parseInt(prompt("ingresa el precio de tu segundo articulo (ingresa 0 si unicamente es 1 producto)"));
-    if (preguntaInicial == "lunes") {
-      let caculoDeDescuento = (precio1 + precio2) * 0.15;
-      resultadoConDescuento = precio1 + precio2 - caculoDeDescuento;
-      alert(resultadoConDescuento);
-      calcular = prompt("deseas calcular otros producto con el descuento aplicado si / no");
-    } else if (preguntaInicial == "martes") {
-      let caculoDeDescuento = (precio1 + precio2) * 0.1;
-      resultadoConDescuento = precio1 + precio2 - caculoDeDescuento;
-      alert(resultadoConDescuento);
-      calcular = prompt("deseas calcular otros producto con el descuento aplicado si / no");
-    } else if (preguntaInicial == "viernes") {
-      let caculoDeDescuento = (precio1 + precio2) * 0.1;
-      resultadoConDescuento = precio1 + precio2 - caculoDeDescuento;
-      alert(resultadoConDescuento);
-      calcular = prompt("deseas calcular otros producto con el descuento aplicado si / no");
-    } else {
-      alert("no itrodujiste ningun dato introduze no para salir");
-    }
-  }
-}
 //Funcion para mostrar items en pantalla
 function mostrarItemsEnTienda() {
   let tienda = "";
@@ -47,9 +6,8 @@ function mostrarItemsEnTienda() {
       tienda +
       `
       <div>
-        <p>
-        <img src="${inventarioVinateria[i].imagen}"/>
-        </p>
+        <h3> </h3>
+        <p><img src="${inventarioVinateria[i].imagen}"/> </p>
         <p> "${inventarioVinateria[i].nombreProducto}" </p>
         <p> $${inventarioVinateria[i].precio}</p>
         <p>${inventarioVinateria[i].tipoDeLicor}</p>
@@ -63,42 +21,6 @@ function mostrarItemsEnTienda() {
 
 let esp = " ";
 //objeto
-class PersonaAingresar {
-  constructor(nombre, apellido, edad) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.edad = edad;
-  }
-
-  respuesta() {
-    while (this.edad <= 17) {
-      alert("no tienes la edad suficiente para navegar en este sitio");
-    }
-    if (this.edad >= 18) {
-      let resulta = "Hola" + esp + this.nombre + esp + this.apellido + esp + "tienes" + esp + this.edad + esp + "años" + esp + "bienvenido";
-      `<div>
-        <h3> 
-        <p>"${resulta}" </p>
-        </h3>
-      </div>
-      `;
-      document.getElementById("anuncioEntrada").innerHTML = resulta;
-    } else {
-      this.edad = 0;
-      while (this.edad == 0) {
-        alert("no llenaste los campos requeridos");
-      }
-    }
-  }
-}
-
-//term objeto class
-const personaIngresada = new PersonaAingresar(
-  prompt("Esta es una pagina solo para mayores de edad INGRESA tus datos para continuar Nombre "),
-  prompt("Ingresa tu apellido"),
-  parseInt(prompt("Ingresa tu edad"))
-);
-personaIngresada.respuesta();
 
 //array de objetos
 class ItemsDisponibles {
@@ -126,7 +48,6 @@ const item10 = new ItemsDisponibles("./imagenes/i125black.jpg", 125, "Red Label 
 
 inventarioVinateria.push(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10);
 console.log(inventarioVinateria);
-mostrarItemsEnTienda();
 
 let preguntaEntrarAbuscador = prompt("deseas buscar alguno de nuestros productos? \n 1)Buscar Por Tipo de licor \n 2)Buscar por nombre de licor");
 switch (preguntaEntrarAbuscador) {
@@ -147,3 +68,98 @@ switch (preguntaEntrarAbuscador) {
   default:
     break;
 }
+
+function mostrarItemsEnCarrito() {
+  if (carritoDeCompras.length == 0) {
+    document.getElementById("itemsEnElCarrito").innerHTML = "<h3>NO HAY NADA EN EL CARRO</h3>";
+  } else {
+    let html = "";
+    for (let i = 0; i < carritoDeCompras.length; i++) {
+      html =
+        html +
+        `
+      <div>
+      <p> <img src="${carritoDeCompras[i].imagen}" /></p>
+      <p> ${carritoDeCompras[i].nombreProducto}</p>
+      <p> ${carritoDeCompras[i].tipoDeLicor}</p>
+      <p> $${carritoDeCompras[i].precio}</p>
+      <p>${carritoDeCompras[i].id}</p>
+      </div>
+      `;
+    }
+    document.getElementById("itemsEnElCarrito").innerHTML = html;
+  }
+}
+function addToCart(ingresoProducto) {
+  const productoIntroduzido = inventarioVinateria.find((item) => item.nombreProducto == ingresoProducto);
+  carritoDeCompras.push(productoIntroduzido);
+  mostrarItemsEnCarrito();
+}
+//PROBANdo
+let preguntaAgregarArticulos = prompt("DESEA AGGREGAR ALGUNO DE NUESTROS ARTICULOS 'si / no' presiona Enter para continuar");
+if (preguntaAgregarArticulos == "si") {
+  let ingresoProducto = prompt(
+    "ingresa el nombre del producto que quieres ir agregando ingresa 'ok' si tu carrito esta listo" +
+      " Jack Daniels \n" +
+      " Red Label\n" +
+      "Wiliam Lawson\n" +
+      "Don Julio\n" +
+      "Jose Cuervo\n" +
+      "Jimador\n" +
+      "Capitan Morgan\n" +
+      "Bacardi\n" +
+      "Kraken\n" +
+      "Red Label Black\n"
+  );
+  while (ingresoProducto != "ok") {
+    switch (ingresoProducto) {
+      case "Jack Daniels":
+        addToCart(ingresoProducto);
+        break;
+      case "Red Label":
+        addToCart(ingresoProducto);
+        break;
+      case "Wiliam Lawson":
+        addToCart(ingresoProducto);
+        break;
+      case "Don Julio":
+        addToCart(ingresoProducto);
+        break;
+      case "Jose Cuervo":
+        addToCart(ingresoProducto);
+        break;
+      case "Jimador":
+        addToCart(ingresoProducto);
+        break;
+      case "Capitan Morgan":
+        addToCart(ingresoProducto);
+        break;
+      case "Bacardi":
+        addToCart(ingresoProducto);
+        break;
+      case "Kraken":
+        addToCart(ingresoProducto);
+        break;
+      case "Red Label Brake":
+        addToCart(ingresoProducto);
+        break;
+      default:
+        break;
+    }
+    ingresoProducto = prompt(
+      "ingresa el nombre del producto que quieres ir agregando ingresa 'ok' si tu carrito esta listo" +
+        " Jack Daniels \n" +
+        " Red Label\n" +
+        "Wiliam Lawson\n" +
+        "Don Julio\n" +
+        "Jose Cuervo\n" +
+        "Jimador\n" +
+        "Capitan Morgan\n" +
+        "Bacardi\n" +
+        "Kraken\n" +
+        "Red Label Black\n"
+    );
+  }
+} else if (preguntaAgregarArticulos == "no") {
+}
+mostrarItemsEnTienda();
