@@ -145,6 +145,71 @@ body {
   color: rgb(194, 232, 113);
 }
 
+/*pagina tienda*/
+#itemsAmostrar {
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+#itemsAmostrar p {
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+  line-height: 1px;
+}
+#itemsAmostrar p img {
+  width: 10rem;
+  height: 10rem;
+}
+
+#itemsEnElCarrito {
+  z-index: 3;
+  border: 1px solid orange;
+}
+
+#anuncioEntrada {
+  border-radius: 2%;
+  padding: 3rem;
+  position: absolute;
+  display: flex;
+  left: 10vw;
+  width: 80vw;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrrKQ77TBs8h_5HifeFI8mHku96PdvYi3aJ4u3qf3XPP4WP_KRtJMPeKUQCTz3QwcIi5c&usqp=CAU);
+  background-size: contain;
+  opacity: 0;
+  -webkit-animation-name: desaparecer;
+          animation-name: desaparecer;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  font-size: 2rem;
+  color: rgb(233, 233, 233);
+  font-family: "Trebuchet MS";
+  font-weight: 400;
+}
+
+@-webkit-keyframes desaparecer {
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes desaparecer {
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .pieDePaginas {
   background: wheat;
   color: rgb(0, 0, 0);
