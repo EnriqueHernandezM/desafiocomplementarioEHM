@@ -46,6 +46,7 @@ function addToCart(ingresoProducto) {
   mostrarItemsEnCarrito();
 }
 //Terminan Funciones.
+
 let esp = " ";
 //objeto
 class PersonaAingresar {
@@ -60,14 +61,18 @@ class PersonaAingresar {
       alert(resp);
     }
     if (this.edad >= 18) {
+      let mostrando = "";
       let resulta = "Hola" + esp + this.nombre + esp + this.apellido + esp + "tienes" + esp + this.edad + esp + "años" + esp + "bienvenido";
-      `<div>
+      mostrando =
+        mostrando +
+        `<div>
       <h3> 
       <p>${resulta} </p>
+      <p>${mostrarAleatorio};</p>
       </h3>
     </div>
     `;
-      document.getElementById("anuncioEntrada").innerHTML = resulta;
+      document.getElementById("anuncioEntrada").innerHTML = mostrando;
     } else {
       this.edad = 0;
       while (this.edad == 0) {
@@ -90,6 +95,13 @@ class ItemsDisponibles {
 //array disponibles
 let inventarioVinateria = [];
 const carritoDeCompras = [];
+const promosAleatorias = [];
+
+promosAleatorias.push("si nos visitas en Lunes hay 10% de descuentos");
+promosAleatorias.push("los viernes tenemos msi en toda la tienda");
+promosAleatorias.push("los martes tenemos 15% de descuento ");
+
+const mostrarAleatorio = promosAleatorias[Math.floor(Math.random() * promosAleatorias.length)];
 
 const item1 = new ItemsDisponibles("./imagenes/i111jack.jpg", 111, "Jack Daniels", "whiskey", 400);
 const item2 = new ItemsDisponibles("./imagenes/i444redL.jpg", 444, "Red Label", "whiskey", 370);
@@ -195,4 +207,5 @@ if (preguntaAgregarArticulos == "si") {
   }
 } else if (preguntaAgregarArticulos == "no") {
 }
+
 mostrarItemsEnTienda();

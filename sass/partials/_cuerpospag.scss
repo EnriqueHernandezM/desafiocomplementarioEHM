@@ -101,7 +101,7 @@
   animation-duration: 5s;
   animation-delay: 1s;
   font-size: 2rem;
-  color: rgb(233, 233, 233);
+  color: rgb(255, 219, 136);
   font-family: "Trebuchet MS";
   font-weight: 400;
 }
@@ -111,5 +111,12 @@
   }
   100% {
     opacity: 0;
+  }
+}
+main {
+  h4 {
+    font-size: 1.75rem;
+    padding: 3rem;
+    text-align: center;
   }
 }
